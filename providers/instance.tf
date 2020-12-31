@@ -1,11 +1,11 @@
 module "instance" {
-  source        = "../modules"
-  name          = "web-server"
-  instance_type = "t2.nano"
+  source        = "../modules/ec2"
+  instance_type = "t2.micro"
+  ec2name = "Web-server"
 }
 
 module "instance01" {
-  source        = "../modules"
-  name          = "web-host"
-  instance_type = "t2.nano"
+  source        = "../modules/ec2"
+  instance_type = "t2.micro"
+  ec2name = "Web-host"
 }
